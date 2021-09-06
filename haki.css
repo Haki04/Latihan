@@ -10,6 +10,11 @@ body{
   padding-left: 10px;
 }
 
+img:hover{
+  transition: 1s;
+  transform: scale(1.5);
+}
+
 }
 .balok h1{
   color:#ffffff;
