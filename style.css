@@ -10,8 +10,8 @@
     background-size: cover;
     height: 100vh;
     overflow: auto;
- 
-    animation: imge 2s infinite;
+   animation: imge 7s infinite;
+    transition: 1s;
 }
 @keyframes imge{
 	0%{
@@ -25,7 +25,7 @@
 		background-position: 0 60% ;
 	}
 	100%{
-		background-position: 0 20%;
+		background-position: 50% 0;
 	}
 }
 
