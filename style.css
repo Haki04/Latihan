@@ -10,6 +10,23 @@
     background-size: cover;
     height: 100vh;
     overflow: auto;
+ 
+    animation: imge 2s infinite;
+}
+@keyframes imge{
+	0%{
+		background-position: 20% 0 ;
+		
+	}
+	25%{
+		background-position: 40% 0;
+	}
+	50%{
+		background-position: 0 60% ;
+	}
+	100%{
+		background-position: 0 20%;
+	}
 }
 
 .navbar{
