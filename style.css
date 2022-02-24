@@ -1,25 +1,27 @@
-    	*{
+   	    	*{
     margin: 0;
     padding: 0;
 }
 
 .main{
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(iya.jpg);
+    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpwIqr_wt8wlQ5r-Oa5gENa4frN7Ny93Sp0xpqa_4vOiBdLdew5EQCiGca&s=10);
     background-position: center;
     background-size: cover;
     height: 100vh;
-    overflow: auto;
-   animation: imge 9s infinite;
+    overflow: auto; 
+    animation: imge 7s infinite;
     transition: 1s;
 }
 @keyframes imge{
 	
+	50%{
+		background-position: 100% 0;
+	}
 	100%{
-		background-position:100% 0;
+		background-position: 0 100%;
 	}
 }
-
 .navbar{
     width: 1200px;
     height: 75px;
@@ -180,13 +182,15 @@ ul li a:hover{
     width: 250px;
     height: 380px;
     background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
-    position: absolute;
-    top: 150px;
-    right: 30px;
-    transform: translate(0%,-5%);
     border-radius: 10px;
     padding: 25px;
-    position: fixed;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: auto;
+    z-index: ;
+    box-shadow: 0 0 12px whitesmoke;
 }
 
 .form h2{
@@ -276,17 +280,77 @@ ul li a:hover{
     color: #ff7200;
 }
 div.kata{
-	width: 500px;
+	width: calc(100% - 30%);
 }
 div.tulisan{
-	width: 400px;
+	width: calc(100% - 20%);
 	height: 200px;
 	overflow: auto;
 	margin: auto;
 	background: rgba(0,0,0,.3);
-	padding: 5px;
+	padding: 15px;
 }
 span.hem{
 	color: whitesmoke;
 	font-family: arial;
+}
+div.kata p{
+	font-size: 10px;
+}
+div.lgn{
+	position: absolute;
+	width: 0;
+	transform: translate(-50%,-50%);
+	top: 50%;
+	left: 50%;
+	padding: 5px;
+	background: rgba(0,0,0,.1);
+	z-index: -1;
+		width: calc(100% - 20%);
+		height: 700px;
+}
+
+#lgn{
+	animation: lgn 2s forwards;
+	transition: 1s;
+}
+
+@keyframes lgn{
+	100%{
+		background: rgba(0,0,0,.7);
+		z-index: 1;
+	}
+}
+span#lg{
+	background: darkorange;
+	font-family: arial;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	padding: 2px;
+	width: 80px;
+	display: inline-block;
+	text-align: center;
+	position: absolute;
+	color: black;
+	box-sizing: border-box;
+	right: 20px;
+	top: -10px;
+}
+span#lg:hover{
+	border-radius: 4px;
+	color: white;
+	
+}
+div.marquee{
+	width: 300px;
+	height: 40px;
+	font-family: arial;
+	color: white;
+	font-weight: bold;
+	text-shadow: 0 0 4px whitesmoke;
+	position: absolute;
+	right: 40px;
+	top: -50px;
+	letter-spacing: 2px;
 }
