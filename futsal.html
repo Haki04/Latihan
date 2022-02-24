@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Webpage Design</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Ekstrakulikuler Futsal</title>
+    <style type="text/css" media="all">
+ 
+    </style>
 </head>
 
 <body>
@@ -20,6 +22,7 @@
                     <li><a href="#">SERVICE</a></li>
                     <li><a href="#">DESIGN</a></li>
                     <li><a href="#">CONTACT</a></li>
+                    
                 </ul>
             </div>
 
@@ -30,7 +33,13 @@
 
         </div> 
         <div class="content">
-            <h1>Ketangkasan & <br><span>Kekompakan</span> <br>Create by <span class="hem">ROJAK</span></h1>
+        	<div class="marquee">
+        		<marquee>SELAMAT DATANG DI WEB SITE KAMI</marquee>
+        	</div>
+        	<ul>
+        		<li><span id="lg">LOGIN</span></li>
+        	</ul>
+            <h1>Ketangkasan & <br><span>Kekompakan</span> <br>Create by <span class="hem">SAYA</span></h1>
             <div class="kata">
             	
             <p class="par">Sekolah merupakan lembaga formal pendidikan yang memfasilitasi proses kegiatan belajar mengajar (KBM) antara guru dan siswa. Untuk itu sekolah memiliki peranan yang besar dalam membentuk kepribadian siswa. Hal ini sangat signifikat dengan posisi sekolah bagi siswa, karena sekolah merupakan tempat bagi siswa untuk mengembangkan kreatifitas, Intelektualitas, moralitas, selain karena intensitas keberadaan siswa tersebut. Sekolah juga berperan penting dalam pembentukan kemajuan IPTEK, kekuatan IMTAQ, dan keseragaman jasmani.
@@ -50,12 +59,13 @@
             </div>
 
                 <button class="cn"><a href="#">JOIN US</a></button>
-
+																			<div class="lgn">
+																				
                 <div class="form">
                     <h2>Login Here</h2>
                     <input type="email" name="email" placeholder="Enter Email Here">
                     <input type="password" name="" placeholder="Enter Password Here">
-                    <button class="btnn"><a href="#">Login</a></button>
+                    <button class="btnn" id="btn"><a href="#">Login</a></button>
 
                     <p class="link">Don't have an account<br>
                     <a href="#">Sign up </a> here</a></p>
@@ -70,10 +80,24 @@
                     </div>
 
                 </div>
+																			</div>
                     </div>
                 </div>
         </div>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
+<script type="text/javascript" charset="utf-8">
+const tanya = prompt("masukkan nama anda :");
+alert("SELAMAT DATANG " + tanya);
+	const lg = document.getElementById("lg");
+	const btn = document.getElementById("btn");
+	const lgn = document.querySelector("div.lgn");
+	lg.addEventListener("click",function(){
+		lgn.setAttribute("id","lgn");
+		btn.addEventListener('click',function(){
+			lgn.removeAttribute("id","lgn");
+		})
+	})
+</script>
 </html>
