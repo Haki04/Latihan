@@ -1,0 +1,217 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body{
+  font-family: sans-serif;
+  overflow: scroll;
+  user-select: none;
+}
+@keyframes bg{
+	
+	0%{
+		background-position: 100% 0 ;
+	}
+	100%{
+		background-position: 0 100%;
+	}
+	}
+}
+nav .logo{
+  color: white;
+  font-size: 33px;
+  font-weight: bold;
+  line-height: 70px;
+  padding-left: 110px;
+}
+nav{
+  height: 70px;
+  margin: auto;
+  background: #063247;
+  box-shadow: 0 3px 15px rgba(0,0,0,.4);
+}
+nav ul{
+  float: right;
+  margin-right: 30px;
+}
+nav ul li{
+  display: inline-block;
+}
+nav ul li a{
+  color: white;
+  display: block;
+  padding: 0 15px;
+  line-height: 70px;
+  font-size: 20px;
+  background: #063247;
+  transition: .5s;
+}
+nav ul li a:hover,
+nav ul li a.active{
+  color: #23dbdb;
+}
+nav ul ul{
+  position: absolute;
+  top: 85px;
+  border-top: 3px solid #23dbdb;
+  opacity: 0;
+  visibility: hidden;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+  transition: .3s linear;
+}
+nav ul ul li{
+  width: 150px;
+  display: list-item;
+  position: relative;
+  border: 1px solid #042331;
+  border-top: none;
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -70px;
+  left: 150px;
+}
+nav ul ul li a i{
+  margin-left: 45px;
+}
+section{
+  background: url(iya.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  animation: bg 7s infinite;
+  transition: 1s;
+}
+label.logo{
+	font-family: arial;
+	font-weight: bold;
+	font-size: 30px;
+	left: 30px;
+	line-height: 70px;
+	position: relative;
+	color: darkorange;
+}
+div.content{
+	width: 100%;
+	min-height: 100%;
+	overflow: scroll;
+	background: rgba(0,0,0,.2);
+	margin: auto;
+}
+
+
+span#lg{
+	background: darkorange;
+	font-family: arial;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	padding: 2px;
+	width: 80px;
+	display: inline-block;
+	text-align: center;
+	position: absolute;
+	color: black;
+	box-sizing: border-box;
+	right: 20px;
+	top: 50px;
+}
+span#lg:hover{
+	border-radius: 4px;
+	color: white;
+	
+}
+div.marquee{
+	width: 300px;
+	height: 40px;
+	font-family: arial;
+	color: white;
+	font-weight: bold;
+	text-shadow: 0 0 4px whitesmoke;
+	position: absolute;
+	right: 40px;
+	top: -50px;
+	letter-spacing: 2px;
+}
+
+
+div.kata{
+	width: calc(100% - 100px);
+}
+div.tulisan{
+	width: calc(100% - 20%);
+	height: 200px;
+	overflow: auto;
+	margin: auto;
+	background: rgba(0,0,0,.3);
+	padding: 15px;
+}
+span.hem{
+	color: whitesmoke;
+	font-family: arial;
+}
+div.kata p{
+	font-size: 20px;
+}
+
+.content{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    color: #fff;
+    position: relative;
+}
+
+.content .par{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+		
+}
+
+.content h1{
+    font-family: 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+}
+
+.content .cn{
+    width: 160px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+    position: relative;
+    top: 100px;
+    
+}
+
+.content .cn a{
+    text-decoration: none;
+    color: #000;
+    transition: .3s ease;
+}
