@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Test buat kamu</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: Arial;
+			font-weight: bold;
+		}
+		.cover{
+			width: 100%;
+			display: flex;
+			height: 100vh;
+			justify-content: center;
+			align-items: center;
+			background: black ;
+			perspective: 400px;
+		}
+		marquee {
+			width: 100%;
+			transform: rotateX(50deg) rotateY(20deg);
+		}
+		h1{
+			color: white;
+			
+		}
+		#satu,#dua{
+			font-size: 1.4em;
+			display: inline-block;
+			padding: 2px 5px;
+			background: orange;
+			border-radius: 10px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="cover">
+		
+		<marquee scrollamount="9">
+				<h1>Ciee sendirian aja, <span id="satu">JOMBLO</span>... iya ... <span id="dua">Iyaa</span> kasihan hahhah sama :) </h1>
+		</marquee>
+
+		
+	</div>
+	
+</body>
+</html>
