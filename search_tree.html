@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Pencarian</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			font-family: arial;
+		}
+		.cover{
+			width: 100%;
+			height: 100vh;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: black;
+			background-size: cover;
+			transition: 1s;
+			
+		}
+		.pencarian{
+			width: 320px;
+			height: 200px;
+			background: transparent;
+			display: flex;
+			border-radius: 10px;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			flex-wrap: wrap;
+		}
+		.cari{
+			background: #2C3333;
+			width: calc(100% - 5px);
+			justify-content: space-around;
+			align-items: center;
+			display: flex;
+			padding: 5px;
+			border-radius: 7px;
+			opacity: .2;
+			animation: anim 1s forwards;
+			transition: .5s;
+		}
+		@keyframes anim{
+			to{
+				opacity: .8;
+			}
+		}
+		
+		.cari input{
+			height: 40px;
+			background-color: #1B2430;
+			border: none;
+			width: calc(100% - 30%);
+			padding: 2px 2px 2px 4px;
+			border-radius: 5px;
+			font-weight: bold;
+			letter-spacing: 1px;
+			margin: 0 4px 0 0;
+			transition: .7s;
+			color: white;
+		}
+		.cari img{
+			width: 40px;
+			margin-top: -2px;
+			margin-left: 15px;
+		}
+		.pencarian select{
+			background: #1B2430;
+			height: 40px;
+			border: none;
+			width: calc(100% - 70%);
+			border-radius: 5px;
+			position: relative;
+			color: white;
+		}
+		.s{
+			position: absolute;
+			bottom: 10px;
+			color: white;
+			letter-spacing: 2px;
+			font-size: 10px;
+		}
+		.d{
+			color: #d6f1f8;
+			font-weight: bold;
+		}
+		button{
+			border: none;
+			background: transparent;
+		}
+	</style>
+</head>
+<body>
+	<div class="cover">
+		<form action="" class="pencarian" method="get">
+			<div class="cari">
+				<input type="text" name="q" id="input" placeholder="cari" required="" autofocus="">
+				
+			<select name="" id="tujuan">
+				<option value="-">tujuan -</option>
+				<option value="https://www.google.com/search">Google</option>
+				<option value="https://www.youtube.com/results">Youtube</option>
+				<option value="https://www.tiktok.com/search">Tiktok</option>
+				<option value="https://github.com/search">Github</option>
+				<option value="https://stackoverflow.com/search">Stackoverflow</option>
+				<option value="https://yandex.com/search/">Yandex</option>
+				<option value="https://duckduckgo.com/">Duckduck Go</option>
+			</select>
+			<button type="submit">
+				<img src="cari.png" alt="">
+			</button>
+			</div>
+		</form>
+		<span class="s">dibuat oleh <span class="d">HAKI</span></span>
+	</div>
+	<script>
+		const formAction = document.querySelector(".pencarian")
+		const tujuan = document.querySelector("#tujuan")
+		const nameQuery = document.querySelector("#input")
+		const bg = document.querySelector(".cover")
+		const input_q = document.querySelector("input")
+		let i = 0
+	!function gantiBg(){
+		const daftar_bg = ['bg1.jpg', 'bg2.jpg', 'bg3.jpg', 'bg4.jpg', 'bg5.jpg']
+			if(window.screen.width < 600){
+				bg.style.backgroundImage = `url('${daftar_bg[0]}')`
+			setInterval(()=>{
+			bg.style.backgroundImage = `url('${daftar_bg[i]}')`
+			i++
+			if(i > daftar_bg.length -1){
+				i = 0
+			}
+		}, 5000)	
+		}else{
+			bg.style.backgroundColor = "#1188a5"
+		}
+		
+	}()
+		
+		tujuan.addEventListener("change",() =>{
+		let tujuan_isi = tujuan.value
+		formAction.setAttribute("action", tujuan_isi);
+		if(tujuan.options[tujuan.selectedIndex].text == "Yandex"){
+			//alert("test")
+		input_q.setAttribute("name", "text");	
+		}else{
+		input_q.setAttribute("name", "q");	
+		}
+		//	alert(tujuan_isi_cek)
+		})
+		
+	</script>
+</body>
+</html>
