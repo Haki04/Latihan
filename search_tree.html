@@ -126,7 +126,8 @@
 		const nameQuery = document.querySelector("#input")
 		const bg = document.querySelector(".cover")
 		const input_q = document.querySelector("input")
-		let i = 0
+		const w = document.querySelector(".pencarian")
+                let i = 0
 	!function gantiBg(){
 		const daftar_bg = ['bg1.jpg', 'bg2.jpg', 'bg3.jpg', 'bg4.jpg', 'bg5.jpg']
 		const daftar_bg_laskap = ['bg_l1.jpg', 'bg_l2.jpg', 'bg_l3.jpg', 'bg_l4.jpg', 'bg_l5.jpg', 'bg_l6.jpg', 'bg_l7.jpg']
@@ -142,6 +143,7 @@
 		}, 5000)	
 		}else{
 			//alert("test")
+                        w.style.width = "400px"
 			bg.style.backgroundImage= `url('${daftar_bg_laskap[3]}'`
 			setInterval(()=>{
 			bg.style.backgroundImage = `url('${daftar_bg_laskap[i]}')`
@@ -149,7 +151,7 @@
 			if(i > daftar_bg_laskap.length -1){
 				i = 0
 			}
-		}, 5000)	
+		}, 10000)	
 		}
 		
 	}()
